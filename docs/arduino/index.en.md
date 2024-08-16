@@ -33,19 +33,19 @@ The badge carries an ESP32-S3 with some peripherals and custom pin settings. In 
 #### Installing Library Dependencies for Arduino Sketches
 To work with peripherals like the display etc. on the badge, you will need install some libraries. The required libraries for an example are always listed at the top of the sketch.
 
-### Starting the example sketch in the main firmware
-* In the main firmware launcher menu on the badge, select "Micropython".
-    * If you don't main firmware installed yet, take a look at [our reset guide](../reset.en.md) first.
+### Starting the example sketch in the default firmware
+* In the default firmware launcher menu on the badge, select "Micropython".
+    * If you don't default firmware installed yet, take a look at [our reset guide](../reset.en.md) first.
 * Your sketch will start now.
-    * Please note: Resetting the esp will return to main firmware.
+    * Please note: Resetting the esp will return to default firmware.
 
-### Alternative upload option: not using the fri3d badge main firmware
-#### Explanation about normal sketch uploading
-When you are using our fri3d-esp32 boards manager package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The main firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
+### Alternative upload option: not using the default fri3d badge firmware
+#### Explanation about sketch uploading using the method above
+When you are using our fri3d-esp32 boards manager package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The default fri3d badge firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
 
-#### What to do if you don't want to use the fri3d badge main firmware
-If you want to overwrite the main firmware instead, then:
+#### What to do if you don't want to use the default fri3d badge firmware
+If you want to overwrite the default fri3d badge firmware instead, then:
 
 * The first time, you need to select the **EspTool** option via **Tools>Programmer** in the Arduino IDE.
 * In the Arduino IDE Menu, select **Sketch>Upload Using Programmer** in the Arduino IDE.
-    * Note: When you have done this, you need to follow [our reset guide](../reset.en.md) if you want to go back to the main firmware.
+    * Note: When you have done this, you need to follow [our reset guide](../reset.en.md) if you want to go back to the default fri3d badge firmware.

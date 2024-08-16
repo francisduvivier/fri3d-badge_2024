@@ -33,19 +33,19 @@ De badge bevat een ESP32-S3 met enkele randapparaten en aangepaste pin-instellin
 #### Installeren van bibliotheekafhankelijkheden voor Arduino Sketches
 Om met randapparaten zoals het display op de badge te werken, moet je enkele bibliotheken installeren. De vereiste bibliotheken voor een voorbeeld staan altijd bovenaan de schets vermeld.
 
-### Het starten van de voorbeeld schets in de main firmware
-* Selecteer "Micropython" in het main firmware launcher menu op de badge.
-    * Als je de main firmware nog niet hebt geïnstalleerd, bekijk dan eerst [onze reset-gids](../reset.nl.md).
+### Het starten van de voorbeeld schets in de default firmware
+* Selecteer "Micropython" in het default firmware launcher menu op de badge.
+    * Als je de default firmware nog niet hebt geïnstalleerd, bekijk dan eerst [onze reset-gids](../reset.nl.md).
 * Je schets zal nu starten.
-    * Let op: Het resetten van de esp brengt je terug naar de main firmware.
+    * Let op: Het resetten van de esp brengt je terug naar de default firmware.
 
-### Alternatieve uploadoptie: de fri3d badge main firmware niet gebruiken
-#### Uitleg over normaal schets uploaden
-Als je ons fri3d-esp32 boards manager pakket gebruikt, wordt esp_tool zo geconfigureerd dat het alleen naar de micropython-partitie (op adres 0x410000) schrijft. De main firmware moet dan de esp32 aanwijzen om vanaf die partitie te starten. Dit gebeurt wanneer je `Micropython` selecteert in het hoofdmenu op de badge.
+### Alternatieve uploadoptie: de default fri3d badge firmware niet gebruiken
+#### Uitleg over bovenstaande manier van  schets uploaden
+Als je ons fri3d-esp32 boards manager pakket gebruikt, wordt esp_tool zo geconfigureerd dat het alleen naar de micropython-partitie (op adres 0x410000) schrijft. De default firmware moet dan de esp32 aanwijzen om vanaf die partitie te starten. Dit gebeurt wanneer je `Micropython` selecteert in het hoofdmenu op de badge.
 
-#### Wat te doen als je de fri3d badge main firmware niet wilt gebruiken
-Als je in plaats daarvan de main firmware wilt overschrijven, volg dan deze stappen:
+#### Wat te doen als je de default fri3d badge firmware niet wilt gebruiken
+Als je in plaats daarvan de default fri3d badge firmware wilt overschrijven, volg dan deze stappen:
 
 * Selecteer de **EspTool** optie via **Hulpmiddelen>Programmer** in de Arduino IDE.
 * Selecteer **Schets>Uploaden met Programmer** in het Arduino IDE-menu.
-    * Let op: Als je dit hebt gedaan en terug wilt naar de main firmware, moet je [onze reset-gids](../reset.nl.md) volgen.
+    * Let op: Als je dit hebt gedaan en terug wilt naar de default fri3d badge firmware, moet je [onze reset-gids](../reset.nl.md) volgen.
