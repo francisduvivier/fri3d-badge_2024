@@ -10,6 +10,7 @@ Zoek je info voor een van deze borden? Klik dan onmiddellijk door naar die pagin
 <a href="/badge_2024/noisycricket/"><img src="noisycricket/pin_header_alternate_orientation.png" alt="Noisy Cricket"/></a>
 <a href="/badge_2024/communicator/"><img src="communicator.webp" alt="Communicator"/></a>
 <a href="/badge_2024/onboarding/"><img src="badge2024.jpg" alt="Badge 2024"/></a>
+<a href="/badge_2024/blaster-2022/"><img src="blaster-2022.webp" alt="Blaster 2022"/></a>
 
 </div>
 
@@ -28,6 +29,7 @@ Je kan jouw badge op verschillende manieren programmeren:
 - Wie liever [Python](micropython) programmeert, kan gelijk welke tekst editor gebruiken, maar Visual Studio Code geeft je wel wat extras.
 - Om je badge te laten babbelen met je smart home is er [esphome](esphome). Je kan de command line gebruiken of het esphome dashboard.
 - Als je liever niet typt, kan je blokjes slepen met [bipes](bipes), een beetje zoals Scratch
+- De `blaster-2022`, `blaster-2024`(flamingo) en communicator kan je ook programmeren met [Embeetle IDE](https://embeetle.com). Klik op het betreffende bordje bovenaan deze pagina, voor een step-by-step tutorial.
 
 ## Reset Standaard Firmware
 
