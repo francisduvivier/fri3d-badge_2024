@@ -4,19 +4,19 @@ The Fri3d Badge 2024 can also be programmed using the Arduino IDE.
 
 ## Arduino IDE Settings
 
-The badge carries an ESP32-S3 with some peripherals and custom pin settings. In order to work easily with the badge in Arduino IDE, you should install our esp32-fri3d custom boards manager package.
+The badge carries an ESP32-S3 with some peripherals and custom pin settings. In order to work easily with the badge in Arduino IDE, you should install our esp32-fri3d custom boards package.
 
 ### Installing the custom esp32-fri3d board package
 * In your Arduino IDE, open **File>Preferences** or **Settings**
 * Enter `https://github.com/Fri3dCamp/badge_2024_arduino/releases/latest/download/package_fri3d-esp32_index.json` into the “Additional Board Manager URLs” field
 * Open **Tools>Board>Board Manager**
-* Search for the `fri3d-esp32` boards manager from Fri3d Vzw and install the latest version.
+* Search for the `fri3d-esp32` boards from Fri3d Vzw and install the latest version.
 
 #### Alternative option: using official espressif esp32 boards package
-* If you for some reason want to use the [official espressif esp32 boards package](https://espressif.github.io/arduino-esp32) instead of our modified package, then follow [the instructions for the official esp32 boards manager package](./using_official_esp32_boards_manager_package.en.md).
+* If you for some reason want to use the official espressif [esp32](https://espressif.github.io/arduino-esp32) boards package instead of our modified package, then follow [the instructions for the official esp32 boards package](./using_official_esp32_boards_manager_package.en.md).
 
 ### Selecting the Fri3d Badge under boards
-* If you have successfully installed the esp32-fri3d custom boards manager, then you should now be able to select the `Fri3d Badge 2024 (ESP32-S3-WROOM-1)` board under **Tools>Board>fri3d-esp32**
+* If you have successfully installed the esp32-fri3d custom boards, then you should now be able to select the `Fri3d Badge 2024 (ESP32-S3-WROOM-1)` board under **Tools>Board>fri3d-esp32**
 
 ### Arduino IDE examples
 * After you have selected the `Fri3d Badge 2024` board, you should also find a `Fri3d Badge 2024` section under **File>Examples**
@@ -41,7 +41,7 @@ To work with peripherals like the display etc. on the badge, you will need insta
 
 ### Alternative upload option: not using the default fri3d badge firmware
 #### Explanation about sketch uploading using the method above
-When you are using our fri3d-esp32 boards manager package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The default fri3d badge firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
+When you are using our fri3d-esp32 boards package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The default fri3d badge firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
 
 #### What to do if you don't want to use the default fri3d badge firmware
 If you want to overwrite the default fri3d badge firmware instead, then:

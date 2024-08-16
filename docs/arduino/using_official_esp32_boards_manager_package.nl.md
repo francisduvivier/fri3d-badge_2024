@@ -1,11 +1,11 @@
-# Arduino IDE-instelling met de officiële ESP32-boardpakket van Espressif
-Als je niet de aangepaste fri3d board manager-pakket in de Arduino IDE wilt gebruiken, volg dan de onderstaande stappen om het officiële ESP32-boardpakket te installeren.
+# Arduino IDE gebruiken met het officiële esp32 bord pakket van Espressif
+Als je niet ons aangepaste fri3d bord pakket in de Arduino IDE wilt gebruiken, volg dan de onderstaande stappen om het officiële esp32 bord pakket te gebruiken.
 
-## Voeg ESP32-S3-board toe aan je Arduino IDE
+## Voeg esp32 bord pakket toe aan je Arduino IDE
 
-* Open **Hulpmiddelen>Bord>Bordbeheerder**
-* Zoek naar de `esp32`-boards van Espressif Systems en installeer versie 2.0.14 (let op dat de display driver crasht in versie 2.0.15+ en 3.x.x).
-* Als je het ESP32-boardpakket daar niet kunt vinden, volg dan eerst deze stappen:
+* Open **Hulpmiddelen>Bord>Bordbeheerder...**
+* Zoek naar de `esp32` van Espressif Systems en installeer **versie 2.0.14** (let op want de display driver crasht in versie 2.0.15+ en 3.x.x).
+* Als je het esp32 bord pakket daar niet kunt vinden, volg dan eerst deze stappen:
     * Open in je Arduino IDE **Bestand>Voorkeuren**
     * Voer `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` in het veld “Aanvullende Boardbeheer-URL's” in.
 
