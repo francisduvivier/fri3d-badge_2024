@@ -31,7 +31,7 @@ De badge bevat een ESP32-S3 met enkele randapparaten en aangepaste pin-instellin
 * Pas de voorbeelden aan en experimenteer!
 
 #### Installeren van bibliotheekafhankelijkheden voor Arduino Sketches
-Om met randapparaten zoals het display op de badge te werken, moet je enkele bibliotheken installeren. De vereiste bibliotheken voor een voorbeeld staan altijd bovenaan de schets vermeld.
+Om met randapparaten zoals het display op de badge te werken, moet je enkele bibliotheken installeren. De vereiste bibliotheken voor een voorbeeld staan altijd bovenaan de schets vermeld met  `// Library Dependency: ...` comments.
 
 ### Het starten van de voorbeeld schets in de default firmware
 * Selecteer "Micropython" in het default firmware launcher menu op de badge.

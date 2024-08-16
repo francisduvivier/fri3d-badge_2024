@@ -31,7 +31,7 @@ The badge carries an ESP32-S3 with some peripherals and custom pin settings. In 
 * Change and mix the examples and have fun!
 
 #### Installing Library Dependencies for Arduino Sketches
-To work with peripherals like the display etc. on the badge, you will need install some libraries. The required libraries for an example are always listed at the top of the sketch.
+To work with peripherals like the display etc. on the badge, you will need install some libraries. The required libraries for an example are always listed at the top of the sketch with `// Library Dependency: ...` comments.
 
 ### Starting the example sketch in the default firmware
 * In the default firmware launcher menu on the badge, select "Micropython".
