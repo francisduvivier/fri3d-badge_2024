@@ -11,7 +11,7 @@
 3. Component side of the pcb is where the fri3d logo is
 
     - 33 Ohm (blue body and orange,orange.black colored bands) resistor on top
-    - 120 Ohm (beige body and black,red,black colored bands) risistor on bottom
+    - 120 Ohm (beige body and brown, red, brown colored bands) risistor on bottom
 
     2 resistors soldered
     ![resistors soldered](20240418_212359.jpg)

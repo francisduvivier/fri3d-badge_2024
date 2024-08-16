@@ -1,16 +1,51 @@
+# Arduino IDE Guide
+The Fri3d Badge 2024 can also be programmed using the Arduino IDE. 
+* To get started, you will first have to [install the Arduino IDE](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing).
 
-download the [Arduino IDE from their website](https://www.arduino.cc/en/software)
+## Arduino IDE Settings
 
-# Arduino IDE setup steps
-For the Fri3d badge to be usable in the Arduino IDE, you need to install version `2.0.17` of the esp32 board package. Below are the steps:
+The badge carries an ESP32-S3 with some peripherals and custom pin settings. In order to work easily with the badge in Arduino IDE, you should install our esp32-fri3d custom boards package.
 
-## General Arduino IDE Setup
-- From the `Tools` Menu, select `Boards` -> `Boards Manager` in the Arduino IDE, then install **version 2.0.17** of the esp32 package.
-  - Reason for version 2.0.17 is that I tried version 3.0.2 and **version 3.0.2 causes compilation errors** for the ESP32S3 board.
-- From the `Tools` Menu, select `Board` -> `esp32` -> `ESP32S3 Dev Module`
+### Installing the custom esp32-fri3d board package
+* In your Arduino IDE, open **File>Preferences** or **Settings**
+* Enter `https://github.com/Fri3dCamp/badge_2024_arduino/releases/latest/download/package_fri3d-esp32_index.json` into the “Additional Board Manager URLs” field
+* Open **Tools>Board>Board Manager**
+* Search for the `fri3d-esp32` boards from Fri3d Vzw and install the latest version.
 
-## How to Upload in Arduino IDE
-- Turn on your badge
-- connect your badge via usb to your computer
-- From the `Tools` Menu, select `Port` and select the entry that looks like it might be your badge.
-- Click the Upload Button (right pointing arrow button in green)
+#### Alternative option: using official espressif esp32 boards package
+* If you for some reason want to use the official espressif [esp32](https://espressif.github.io/arduino-esp32) boards package instead of our modified package, then follow [the instructions for the official esp32 boards package](./using_official_esp32_boards_manager_package.en.md).
+
+### Selecting the Fri3d Badge under boards
+* If you have successfully installed the esp32-fri3d custom boards, then you should now be able to select the `Fri3d Badge 2024 (ESP32-S3-WROOM-1)` board under **Tools>Board>fri3d-esp32**
+
+### Arduino IDE examples
+* After you have selected the `Fri3d Badge 2024` board, you should also find a `Fri3d Badge 2024` section under **File>Examples**
+* Code for these examples can also be found under in [our badge_2024_arduino repository under arduino-ide-board-package/libraries/Fri3dBadge2024/examples.](https://github.com/Fri3dCamp/badge_2024_arduino/tree/main/arduino-ide-board-package/libraries/Fri3dBadge2024/examples)
+
+### Uploading a sketch using Arduino IDE
+* Connect the badge to your computer with a USB-C cable
+* Select the correct USB port under **Tools>Port** (on a Mac it's along the lines of `/dev/cu.usbserial-FFFFFFFF`)
+    * Troubleshooting tip: if you cannot see your board, make sure it's turned on and plugged in with a good usb cable.
+* Compile and upload the code with **Sketch>Upload**
+    * Troubleshooting tip: If upload fails even though compilation succeeds, then you might need to manually put it in boot mode. To do that, hold the boot button and then press the reset button, then after a second you can release the boot button.
+* Change and mix the examples and have fun!
+
+#### Installing Library Dependencies for Arduino Sketches
+To work with peripherals like the display etc. on the badge, you will need install some libraries. The required libraries for an example are always listed at the top of the sketch with `// Library Dependency: ...` comments.
+
+### Starting the example sketch in the default firmware
+* In the default firmware launcher menu on the badge, select "Micropython".
+    * If you don't default firmware installed yet, take a look at [our reset guide](../reset.en.md) first.
+* Your sketch will start now.
+    * Please note: Resetting the esp will return to default firmware.
+
+### Alternative upload option: not using the default fri3d badge firmware
+#### Explanation about sketch uploading using the method above
+When you are using our fri3d-esp32 boards package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The default fri3d badge firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
+
+#### What to do if you don't want to use the default fri3d badge firmware
+If you want to overwrite the default fri3d badge firmware instead, then:
+
+* The first time, you need to select the **EspTool** option via **Tools>Programmer** in the Arduino IDE.
+* In the Arduino IDE Menu, select **Sketch>Upload Using Programmer** in the Arduino IDE.
+    * Note: When you have done this, you need to follow [our reset guide](../reset.en.md) if you want to go back to the default fri3d badge firmware.

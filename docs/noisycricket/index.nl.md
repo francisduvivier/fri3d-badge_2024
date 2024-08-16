@@ -11,7 +11,7 @@
 3. De componentzijde van de printplaat is waar het fri3d-logo staat
 
     - 33 Ohm (blauwe behuizing en oranje, oranje, zwarte kleurbanden) weerstand bovenaan
-    - 120 Ohm (beige behuizing en zwarte, rode, zwarte kleurbanden) weerstand onderaan  
+    - 120 Ohm (beige behuizing en bruine, rode, bruine kleurbanden) weerstand onderaan  
     2 weerstanden gesoldeerd  
     ![resistors soldered](20240418_212359.jpg)
 
