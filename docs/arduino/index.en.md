@@ -27,7 +27,7 @@ The badge carries an ESP32-S3 with some peripherals and custom pin settings. In 
 * Select the correct USB port under **Tools>Port** (on a Mac it's along the lines of `/dev/cu.usbserial-FFFFFFFF`)
     * Troubleshooting tip: if you cannot see your board, make sure it's turned on and plugged in with a good usb cable.
 * Compile and upload the code with **Sketch>Upload**
-   *  Troubleshooting tip: If upload fails even though compilation succeeds, then you might need to manually put it in boot mode. To do that, hold the boot button and then press the reset button, then after a second you can release the boot button.
+    * Troubleshooting tip: If upload fails even though compilation succeeds, then you might need to manually put it in boot mode. To do that, hold the boot button and then press the reset button, then after a second you can release the boot button.
 * Change and mix the examples and have fun!
 
 #### Installing Library Dependencies for Arduino Sketches

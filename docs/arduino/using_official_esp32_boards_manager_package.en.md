@@ -6,8 +6,8 @@ In case you do not want to use the custom fri3d boards manager package in the ar
 * Open **Tools>Board>Board Manager**
 * Search for the `esp32` boards from Espressif Systems and install the version 2.0.14 (remark that the display driver crashes in 2.0.15+ and 3.x.x).
 * If you do not find the esp32 boards package there, then follow these steps first: 
-  * In your Arduino IDE, open **File>Preferences**
-  * Enter `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` into the “Additional Board Manager URLs” field
+    * In your Arduino IDE, open **File>Preferences**
+    * Enter `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` into the “Additional Board Manager URLs” field
 
 
 ## Uploading firmware using Arduino IDE

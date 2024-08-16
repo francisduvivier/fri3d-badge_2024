@@ -6,8 +6,8 @@ Als je niet de aangepaste fri3d board manager-pakket in de Arduino IDE wilt gebr
 * Open **Hulpmiddelen>Bord>Bordbeheerder**
 * Zoek naar de `esp32`-boards van Espressif Systems en installeer versie 2.0.14 (let op dat de display driver crasht in versie 2.0.15+ en 3.x.x).
 * Als je het ESP32-boardpakket daar niet kunt vinden, volg dan eerst deze stappen:
-  * Open in je Arduino IDE **Bestand>Voorkeuren**
-  * Voer `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` in het veld “Aanvullende Boardbeheer-URL's” in.
+    * Open in je Arduino IDE **Bestand>Voorkeuren**
+    * Voer `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` in het veld “Aanvullende Boardbeheer-URL's” in.
 
 
 ## Firmware uploaden met Arduino IDE
