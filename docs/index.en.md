@@ -1,6 +1,18 @@
-# Fri3d Camp 2024 Badge
+# Fri3d Camp 2024 Badge and Addons
 
-So you got a cool badge, what can you do with it? ;-)
+[**Update your Badge!**](onboarding/firstupdate)
+
+You're looking for info on one of these boards? Click on it:
+
+<div style="display: grid;grid-gap:1rem;grid-template-columns: repeat(2, 1fr);">
+
+<a href="/badge_2024/flamingo"><img src="flamingo/flamingo.jpg" alt="Flamingo"/></a>
+<a href="/badge_2024/noisycricket/"><img src="noisycricket/pin_header_alternate_orientation.png" alt="Noisy Cricket"/></a>
+<a href="/badge_2024/communicator/"><img src="communicator.webp" alt="Communicator"/></a>
+<a href="/badge_2024/onboarding/"><img src="badge2024.jpg" alt="Badge 2024"/></a>
+<a href="/badge_2024/blaster-2022/"><img src="blaster-2022.webp" alt="Blaster 2022"/></a>
+
+</div>
 
 ## Play with it
 
@@ -19,10 +31,11 @@ Congratulations! If you want to squash some bugs, you're going to need some tool
 - If you prefer [Python](micropython), you can use any plain text editor, but Visual Studio Code works too.
 - If you are into homeassistant and want to connect your badge using [esphome](esphome). You can either use the command line or esphome dashboard.
 - If typing code is not your thing, you can drag blocks in [bipes](bipes)
+- The `blaster-2022`, `blaster-2024`(flamingo) and communicator can also be programmed with [Embeetle IDE](https://embeetle.com). Click on your board at the top of this webpage for a step-by-step guide.
 
 ## Revert to Default Firmware
 
-See [how to reset](reset)
+If your badge is not starting up or you want to revert to the default software, then go to the badge/solder tent where the badge repair station is located. On this PC, you can follow step-by-step instructions to flash each board. Or [click here to see how you can reset the board yourself](reset).
 
 ## Documentation
 
