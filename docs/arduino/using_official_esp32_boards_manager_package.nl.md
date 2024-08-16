@@ -1,18 +1,18 @@
-# Arduino IDE setup using espressif's official esp32 board package
-In case you do not want to use the custom fri3d boards manager package in the arduino IDE, you should follow the below steps instead to install the official esp32 board package.
+# Arduino IDE-instelling met de officiële ESP32-boardpakket van Espressif
+Als je niet de aangepaste fri3d board manager-pakket in de Arduino IDE wilt gebruiken, volg dan de onderstaande stappen om het officiële ESP32-boardpakket te installeren.
 
-## Add ESP32-S3 board to your Arduino IDE
+## Voeg ESP32-S3-board toe aan je Arduino IDE
 
-* Open **Tools>Board>Board Manager**
-* Search for the `esp32` boards from Espressif Systems and install the version 2.0.14 (remark that the display driver crashes in 2.0.15+ and 3.x.x).
-* If you do not find the esp32 boards package there, then follow these steps first: 
-  * In your Arduino IDE, open **File>Preferences**
-  * Enter `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` into the “Additional Board Manager URLs” field
+* Open **Hulpmiddelen>Bord>Bordbeheerder**
+* Zoek naar de `esp32`-boards van Espressif Systems en installeer versie 2.0.14 (let op dat de display driver crasht in versie 2.0.15+ en 3.x.x).
+* Als je het ESP32-boardpakket daar niet kunt vinden, volg dan eerst deze stappen:
+  * Open in je Arduino IDE **Bestand>Voorkeuren**
+  * Voer `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` in het veld “Aanvullende Boardbeheer-URL's” in.
 
 
-## Uploading firmware using Arduino IDE
-* Under **Tools>Board>...** select **..>ESP32 Arduino>ESP32S3 Dev Module**
-* Under **Tools>USB CDC On Boot>...** select `Enabled` to enable the serial port
-* Under **Tools>Flash Size>...** select `16 MB`
-* Under **Tools>PSRAM>...** select `OPI PSRAM`
-* follow the rest of the uploading steps from the [Arduino Guide](./index.en.md#uploading-a-sketch-using-arduino-ide)
+## Firmware uploaden met Arduino IDE
+* Selecteer onder **Hulpmiddelen>Bord>...** **..>ESP32 Arduino>ESP32S3 Dev Module**
+* Selecteer onder **Hulpmiddelen>USB CDC bij opstarten>...** `Ingeschakeld` om de seriële poort in te schakelen
+* Selecteer onder **Hulpmiddelen>Flashgrootte>...** `16 MB`
+* Selecteer onder **Hulpmiddelen>PSRAM>...** `OPI PSRAM`
+* Volg de rest van de uploadstappen uit de [Arduino Gids](./index.en.md#uploading-a-sketch-using-arduino-ide)

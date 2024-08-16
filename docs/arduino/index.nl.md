@@ -1,51 +1,51 @@
-# Arduino IDE Guide
-The Fri3d Badge 2024 can also be programmed using the Arduino IDE.
-* To get started, you will first have to [install the Arduino IDE](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing).
+# Arduino IDE Gids
+De Fri3d Badge 2024 kan ook worden geprogrammeerd met de Arduino IDE.
+* Om te beginnen moet je eerst [de Arduino IDE installeren](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/#windows).
 
-## Arduino IDE Settings
+## Arduino IDE Instellingen
 
-The badge carries an ESP32-S3 with some peripherals and custom pin settings. In order to work easily with the badge in Arduino IDE, you should install our esp32-fri3d custom boards manager package.
+De badge bevat een ESP32-S3 met enkele randapparaten en aangepaste pin-instellingen. Om gemakkelijk met de badge te werken in Arduino IDE, moet je ons esp32-fri3d aangepaste boards manager pakket installeren.
 
-### Installing the custom esp32-fri3d board package
-* In your Arduino IDE, open **File>Preferences** or **Settings**
-* Enter `https://github.com/Fri3dCamp/badge_2024_arduino/releases/latest/download/package_fri3d-esp32_index.json` into the “Additional Board Manager URLs” field
-* Open **Tools>Board>Board Manager**
-* Search for the `fri3d-esp32` boards manager from Fri3d Vzw and install the latest version.
+### Installeren van het aangepaste esp32-fri3d board pakket
+* Open **Bestand>Voorkeuren** of **Instellingen** in je Arduino IDE.
+* Voer `https://github.com/Fri3dCamp/badge_2024_arduino/releases/latest/download/package_fri3d-esp32_index.json` in het veld “Extra Board Manager URL's” in.
+* Open **Hulpmiddelen>Board>Board Manager**.
+* Zoek naar de `fri3d-esp32` boards manager van Fri3d Vzw en installeer de laatste versie.
 
-#### Alternative option: using official espressif esp32 boards package
-* If you for some reason want to use the [official espressif esp32 boards package](https://espressif.github.io/arduino-esp32) instead of our modified package, then follow [the instructions for the official esp32 boards manager package](./using_official_esp32_boards_manager_package.en.md).
+#### Alternatieve optie: gebruik van het officiële espressif esp32 boards pakket
+* Als je om wat voor reden dan ook het [officiële espressif esp32 boards pakket](https://espressif.github.io/arduino-esp32) wilt gebruiken in plaats van ons aangepaste pakket, volg dan [de instructies voor het officiële esp32 boards manager pakket](./using_official_esp32_boards_manager_package.nl.md).
 
-### Selecting the Fri3d Badge under boards
-* If you have successfully installed the esp32-fri3d custom boards manager, then you should now be able to select the `Fri3d Badge 2024 (ESP32-S3-WROOM-1)` board under **Tools>Board>fri3d-esp32**
+### Het selecteren van de Fri3d Badge onder boards
+* Als je het esp32-fri3d aangepaste boards manager pakket succesvol hebt geïnstalleerd, zou je nu het `Fri3d Badge 2024 (ESP32-S3-WROOM-1)` board moeten kunnen selecteren onder **Hulpmiddelen>Board>fri3d-esp32**.
 
-### Arduino IDE examples
-* After you have selected the `Fri3d Badge 2024` board, you should also find a `Fri3d Badge 2024` section under **File>Examples**
-* Code for these examples can also be found under in [our badge_2024_arduino repository under arduino-ide-board-package/libraries/Fri3dBadge2024/examples.](https://github.com/Fri3dCamp/badge_2024_arduino/tree/main/arduino-ide-board-package/libraries/Fri3dBadge2024/examples)
+### Arduino IDE voorbeelden
+* Nadat je het `Fri3d Badge 2024` board hebt geselecteerd, zou je ook een `Fri3d Badge 2024` sectie moeten vinden onder **Bestand>Voorbeelden**.
+* De code voor deze voorbeelden kan ook worden gevonden in [onze badge_2024_arduino repository onder arduino-ide-board-package/libraries/Fri3dBadge2024/examples.](https://github.com/Fri3dCamp/badge_2024_arduino/tree/main/arduino-ide-board-package/libraries/Fri3dBadge2024/examples).
 
-### Uploading a sketch using Arduino IDE
-* Connect the badge to your computer with a USB-C cable
-* Select the correct USB port under **Tools>Port** (on a Mac it's along the lines of `/dev/cu.usbserial-FFFFFFFF`)
-  * Troubleshooting tip: if you cannot see your board, make sure it's turned on and plugged in with a good usb cable.
-* Compile and upload the code with **Sketch>Upload**
-  *  Troubleshooting tip: If upload fails even though compilation succeeds, then you might need to manually put it in boot mode. To do that, hold the boot button and then press the reset button, then after a second you can release the boot button.
-* Change and mix the examples and have fun!
+### Een schets uploaden met Arduino IDE
+* Verbind de badge met je computer met een USB-C kabel.
+* Selecteer de juiste USB-poort onder **Hulpmiddelen>Poort** (op een Mac is dit iets zoals `/dev/cu.usbserial-FFFFFFFF`).
+  * Probleemoplossingstip: als je je board niet kunt zien, zorg er dan voor dat het is ingeschakeld en is aangesloten met een goede USB-kabel.
+* Compileer en upload de code met **Schets>Uploaden**.
+  * Probleemoplossingstip: Als het uploaden mislukt terwijl het compileren wel succesvol was, moet je de badge mogelijk handmatig in de bootmodus zetten. Houd daarvoor de boot-knop ingedrukt en druk vervolgens op de reset-knop. Na een seconde kun je de boot-knop loslaten.
+* Pas de voorbeelden aan en experimenteer!
 
-#### Installing Library Dependencies for Arduino Sketches
-To work with peripherals like the display etc. on the badge, you will need install some libraries. The required libraries for an example are always listed at the top of the sketch.
+#### Installeren van bibliotheekafhankelijkheden voor Arduino Sketches
+Om met randapparaten zoals het display op de badge te werken, moet je enkele bibliotheken installeren. De vereiste bibliotheken voor een voorbeeld staan altijd bovenaan de schets vermeld.
 
-### Starting the example sketch in the main firmware
-* In the main firmware launcher menu on the badge, select "Micropython".
-  * If you don't main firmware installed yet, take a look at [our reset guide](../reset.en.md) first.
-* Your sketch will start now.
-  * Please note: Resetting the esp will return to main firmware.
+### Het starten van de voorbeeld schets in de main firmware
+* Selecteer "Micropython" in het main firmware launcher menu op de badge.
+  * Als je de main firmware nog niet hebt geïnstalleerd, bekijk dan eerst [onze reset-gids](../reset.nl.md).
+* Je schets zal nu starten.
+  * Let op: Het resetten van de esp brengt je terug naar de main firmware.
 
-### Alternative upload option: not using the fri3d badge main firmware
-#### Explanation about normal sketch uploading
-When you are using our fri3d-esp32 boards manager package, esp_tool will be configured to only write to the micropython partition (at address 0x410000). The main firmware then needs to direct the esp32 to start from that partition. This is what happens when you select `Micropython` in the main menu on the badge.
+### Alternatieve uploadoptie: de fri3d badge main firmware niet gebruiken
+#### Uitleg over normaal schets uploaden
+Als je ons fri3d-esp32 boards manager pakket gebruikt, wordt esp_tool zo geconfigureerd dat het alleen naar de micropython-partitie (op adres 0x410000) schrijft. De main firmware moet dan de esp32 aanwijzen om vanaf die partitie te starten. Dit gebeurt wanneer je `Micropython` selecteert in het hoofdmenu op de badge.
 
-#### What to do if you don't want to use the fri3d badge main firmware
-If you want to overwrite the main firmware instead, then:
+#### Wat te doen als je de fri3d badge main firmware niet wilt gebruiken
+Als je in plaats daarvan de main firmware wilt overschrijven, volg dan deze stappen:
 
-* The first time, you need to select the **EspTool** option via **Tools>Programmer** in the Arduino IDE.
-* In the Arduino IDE Menu, select **Sketch>Upload Using Programmer** in the Arduino IDE.
-  * Note: When you have done this, you need to follow [our reset guide](../reset.en.md) if you want to go back to the main firmware.
+* Selecteer de **EspTool** optie via **Hulpmiddelen>Programmer** in de Arduino IDE.
+* Selecteer **Schets>Uploaden met Programmer** in het Arduino IDE-menu.
+  * Let op: Als je dit hebt gedaan en terug wilt naar de main firmware, moet je [onze reset-gids](../reset.nl.md) volgen.
